@@ -1,20 +1,32 @@
-// import { useState } from 'react';
-// import { v4 as uuidv4 } from 'uuid';
-
-import s from './App.module.css';
-import Form from './components/Form/Form';
-import Filter from './components/Filter/Filter';
-import Contacts from './components/Contacts/Contacts';
+// import { useEffect } from 'react';
+// import { useDispatch } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
+import AppBar from './components/AppBar';
+import PhonebookView from './views/PhonebookView';
+import HomeView from './views/HomeView';
+// import RegisterView from './views/RegisterView';
+// import LoginView from './views/LoginView';
+import Container from './components/Container';
+// import { authOperations } from './redux/auth';
 
 function App() {
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   dispatch(authOperations.fetchCurrentUser());
+  // }, [dispatch]);
+
   return (
-    <div className={s.container}>
-      <h1 className={s.titlePhonebook}>Phonebook</h1>
-      <Form />
-      <h2 className={s.titleContacts}>Contacts</h2>
-      <Filter />
-      <Contacts />
-    </div>
+    <Container>
+      <AppBar />
+
+      <Routes>
+        <Route path="/" element={<HomeView/>} />
+        {/* <Route path="/register" component={RegisterView} />
+        <Route path="/login" component={LoginView} /> */}
+        <Route path="/phonebook" element={<PhonebookView/>} />
+      </Routes>
+    </Container>
   );
 }
 
