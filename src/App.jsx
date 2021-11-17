@@ -4,8 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 import AppBar from './components/AppBar';
 import PhonebookView from './views/PhonebookView';
 import HomeView from './views/HomeView';
-// import RegisterView from './views/RegisterView';
-// import LoginView from './views/LoginView';
+import RegisterView from './views/RegisterView';
+import LoginView from './views/LoginView';
 import Container from './components/Container';
 // import { authOperations } from './redux/auth';
 
@@ -22,8 +22,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomeView/>} />
-        {/* <Route path="/register" component={RegisterView} />
-        <Route path="/login" component={LoginView} /> */}
+        <Route path="/register" element={<RegisterView/>} />
+        <Route path="/login" element={<LoginView/>} />
         <Route path="/phonebook" element={<PhonebookView/>} />
       </Routes>
     </Container>
