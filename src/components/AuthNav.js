@@ -1,16 +1,16 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const styles = {
   link: {
-    display: 'inline-block',
-    textDecoration: 'none',
+    display: "inline-block",
+    textDecoration: "none",
     padding: 12,
     fontWeight: 700,
-    color: '#2A363B',
+    color: "#2A363B",
   },
   activeLink: {
-    color: '#E84A5F',
+    color: "#E84A5F",
   },
 };
 
