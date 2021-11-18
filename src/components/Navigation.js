@@ -9,22 +9,15 @@ const styles = {
     fontWeight: 700,
     color: "#2A363B",
   },
-  activeLink: {
-    color: "#E84A5F",
-  },
 };
 
 const Navigation = () => (
   <nav>
-    <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
+    <NavLink to="/" style={styles.link}>
       Главная
     </NavLink>
 
-    <NavLink
-      to="/phonebook"
-      style={styles.link}
-      activeStyle={styles.activeLink}
-    >
+    <NavLink to="/phonebook" style={styles.link}>
       Phonebook
     </NavLink>
   </nav>
