@@ -32,11 +32,11 @@ function App() {
            <Route path="/register" element={<RegisterView/>} />
         </Route>
 
-        <Route path="/login" element={<PublicRoute restricted />}>
+        <Route path="/login" element={<PublicRoute restricted redirectTo='/phonebook' />}>
            <Route path="/login" element={<LoginView/>} />
         </Route>
 
-        <Route path="/phonebook" element={<PrivateRoute/>}>
+        <Route path="/phonebook" element={<PrivateRoute redirectTo='/login' />}>
           <Route path="/phonebook" element={<PhonebookView />} />
         </Route>
         
