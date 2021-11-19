@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import AppBar from './components/AppBar';
 import PhonebookView from './views/PhonebookView';
@@ -7,19 +7,24 @@ import HomeView from './views/HomeView';
 import RegisterView from './views/RegisterView';
 import LoginView from './views/LoginView';
 import Container from './components/Container';
-import { authOperations } from './redux/auth';
+import { authOperations, authSelectors } from './redux/auth';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
 
 function App() {
   const dispatch = useDispatch();
+  const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
+  // console.log('isFetchingCurrentUser',isFetchingCurrentUser);
 
   useEffect(() => {
     dispatch(authOperations.fetchCurrentUser());
   }, [dispatch]);
 
   return (
+    
     <Container>
+      {isFetchingCurrentUser ? (<h1>Показываем React Skeleton </h1>):(
+      <>
       <AppBar />
 
       <Routes>
@@ -41,6 +46,7 @@ function App() {
         </Route>
         
       </Routes>
+      </>)}
     </Container>
   );
 }
