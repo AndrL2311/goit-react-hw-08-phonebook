@@ -1,13 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import { authSelectors, authOperations } from "../../redux/auth";
+import { Button } from "react-bootstrap";
 
 const styles = {
   container: {
     display: "flex",
     alignItems: "center",
-  },
-  avatar: {
-    marginRight: 4,
   },
   name: {
     fontWeight: 700,
@@ -22,9 +20,14 @@ export default function UserMenu() {
   return (
     <div style={styles.container}>
       <span style={styles.name}>Welcome to, {name}</span>
-      <button type="button" onClick={() => dispatch(authOperations.logOut())}>
+      <Button
+        variant="outline-secondary"
+        size="sm"
+        type="button"
+        onClick={() => dispatch(authOperations.logOut())}
+      >
         Logout
-      </button>
+      </Button>
     </div>
   );
 }

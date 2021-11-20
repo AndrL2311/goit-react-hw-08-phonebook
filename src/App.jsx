@@ -10,6 +10,8 @@ import Container from './components/Container';
 import { authOperations, authSelectors } from './redux/auth';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
+import { Spinner } from "react-bootstrap";
+import s from "./App.module.css";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,7 +25,11 @@ function App() {
   return (
     
     <Container>
-      {isFetchingCurrentUser ? (<h1>Показываем React Skeleton </h1>):(
+      {isFetchingCurrentUser ? (
+      <Spinner className={s.spiner} animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+      </Spinner>
+      ) : (
       <>
       <AppBar />
 
@@ -50,10 +56,5 @@ function App() {
     </Container>
   );
 }
-
-
-// {/* <Route element={<PrivateRoute path="/contacts" redirectTo="/" />}>
-//             <Route path="/contacts" element={<ContactView />} />
-//           </Route> */}
 
 export default App;

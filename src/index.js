@@ -7,6 +7,7 @@ import "./index.css";
 import App from "./App";
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./redux/store";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // import reportWebVitals from './reportWebVitals';
 // ============================================

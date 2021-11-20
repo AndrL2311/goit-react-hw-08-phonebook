@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 import UserMenu from "./UserMenu";
 import AuthNav from "./AuthNav";
 import { authSelectors } from "../redux/auth";
+// import { Navbar, Nav } from "react-bootstrap";
 
 const styles = {
   header: {
@@ -18,9 +19,6 @@ export default function AppBar() {
   return (
     <header style={styles.header}>
       <Navigation />
-
-      {/* <AuthNav />
-      <UserMenu /> */}
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>
   );
