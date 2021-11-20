@@ -18,7 +18,7 @@ const Navigation = () => {
   return (
     <nav>
       <NavLink to="/" style={styles.link}>
-        Главная
+        Home
       </NavLink>
       {isLoggedIn && (
         <NavLink to="/phonebook" style={styles.link}>
