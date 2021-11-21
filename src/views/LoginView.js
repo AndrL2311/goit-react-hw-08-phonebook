@@ -52,7 +52,12 @@ export default function LoginView() {
           />
         </label>
 
-        <Button variant="outline-secondary" size="sm" type="submit">
+        <Button
+          className={s.button}
+          variant="outline-secondary"
+          size="sm"
+          type="submit"
+        >
           Login
         </Button>
       </form>

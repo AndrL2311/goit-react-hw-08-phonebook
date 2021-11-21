@@ -63,7 +63,12 @@ export default function RegisterView() {
           />
         </label>
 
-        <Button variant="outline-secondary" size="sm" type="submit">
+        <Button
+          className={s.button}
+          variant="outline-secondary"
+          size="sm"
+          type="submit"
+        >
           Sign Up
         </Button>
       </form>
