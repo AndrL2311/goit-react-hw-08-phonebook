@@ -1,5 +1,6 @@
 .label {
-  margin-top: 20px;
+  color: #2a363b;
+  margin-top: 0px;
   font-size: 20px;
   font-weight: 700;
   font-family: inherit;
@@ -7,6 +8,6 @@
 }
 
 .input {
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 10px;
 }

@@ -1,5 +1,5 @@
-.container {
-  width: 600px;
+.form {
+  width: 320px;
   box-sizing: border-box;
   margin-top: 10px;
   margin-left: auto;
@@ -11,17 +11,13 @@
   background-color: #bff7f7;
 }
 
-.titlePhonebook {
-  font-size: 40px;
-  font-weight: 700;
-  color: #2a363b;
-  padding: 10px;
+.title {
   text-align: center;
 }
-.titleContacts {
-  font-size: 30px;
-  font-weight: 700;
-  color: #2a363b;
-  padding: 10px;
-  text-align: center;
+
+.label {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15;
 }

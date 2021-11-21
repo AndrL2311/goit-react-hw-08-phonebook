@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Button } from "react-bootstrap";
 import s from './Contact.module.css';
 
 function Contact({ id, name, number, onDeleteContact }) {
@@ -6,13 +7,16 @@ function Contact({ id, name, number, onDeleteContact }) {
     <li className={s.item}>
       <span className={s.name}>{name}</span>
       <span className={s.number}>{number}</span>
-      <button
+      <Button
         className={s.button}
+        variant="outline-secondary"
+        size="sm"
         type="button"
         onClick={() => onDeleteContact(id)}
       >
         Delete
-      </button>
+      </Button>
+
     </li>
   );
 }

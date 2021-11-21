@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import contactsOperations from '../../redux/contacts/contacts-operations';
+import { Button } from "react-bootstrap";
 
 import s from './Form.module.css';
 
@@ -77,9 +78,17 @@ function Form({ onSubmit, contacts }) {
           required
         />
       </label>
-      <button className={s.button} type="submit">
+      <Button
+        className={s.button}
+        variant="outline-secondary"
+        size="sm"
+        type="submit"
+      >
         Add Contact
-      </button>
+      </Button>
+      {/* <button className={s.button} type="submit">
+        Add Contact
+      </button> */}
     </form>
   );
 }
