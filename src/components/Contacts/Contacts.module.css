@@ -3,3 +3,10 @@
 
   padding: 0;
 }
+
+.spiner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2px;
+}

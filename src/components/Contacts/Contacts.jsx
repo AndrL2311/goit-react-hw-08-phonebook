@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
+import { Spinner } from "react-bootstrap";
 
 import PropTypes from 'prop-types';
 import s from './Contacts.module.css';
@@ -15,7 +16,13 @@ function Contacts({ contacts, onDeleteContact, getContacts, isLoadingContacts })
 
   return (
     <ul className={s.list}>
-      {isLoadingContacts && <h1>Downloads...</h1>}
+      {isLoadingContacts &&
+      <Spinner className={s.spiner} animation="grow" role="status">
+        <span
+          className="visually-hidden"
+        >Downloads...</span>
+      </Spinner>
+      }
       {contacts.map(contact => (
         <Contact
           key={contact.id}

@@ -9,9 +9,6 @@ const styles = {
     fontWeight: 700,
     color: "#2A363B",
   },
-  activeLink: {
-    color: "#E84A5F",
-  },
 };
 
 export default function AuthNav() {
